@@ -1,0 +1,33 @@
+body{
+  min-height: 100%;
+  md-content[landing]{
+    width: 100%;
+    height: 100%;
+    background-color: #e8e8e8;
+    margin-bottom: 10px;
+    div[analitycs]{
+      margin: 10px;
+      width: calc(70% - 20px);
+      background-color: white;
+      box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+    }
+    div[descripcion]{
+      margin: 10px;
+      width: calc(30% - 20px);
+      box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+    }
+    div[contenedor-servicio]{
+      width: 100%;
+      height: calc(60% - 52px);
+      p{
+        width: 70%;
+        margin: 0px auto;
+      }
+    }
+    div[servicio]{
+      width: calc(100% / 4);
+      float: left;
+      height: 40%;
+    }
+  }
+}
