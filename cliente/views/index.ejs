@@ -2,7 +2,7 @@
 <html ng-app="app">
 <head>
 <link rel="stylesheet" href="/node_modules/angular-material/angular-material.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="../css/material-icons.css" rel="stylesheet">
 <link rel="stylesheet" href="/node_modules/leaflet/dist/leaflet.css" />
 </head>
 <body>
@@ -13,71 +13,19 @@
 <script src="/node_modules/angular-aria/angular-aria.js"></script>
 <script src="/node_modules/angular-animate/angular-animate.js"></script>
 <script src="/node_modules/angular-material/angular-material.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-resource.min.js"></script>
+<script src="/node_modules/angular-route/angular-route.min.js"></script>
+<script src="/node_modules/angular-resource/angular-resource.min.js"></script>
 <script src="/node_modules/leaflet/dist/leaflet.js"></script>
 <script src="/node_modules/angular-leaflet-directive/dist/angular-leaflet-directive.min.js"></script>
-
-<!-- Template -->
-<script type="text/ng-template" id="/todos.html">
-  <md-content>
-    <md-input-container>
-        <label>Search</label>
-        <input >
-      </md-input-container>
-  <md-list flex>
-    <md-subheader class="md-no-sticky">Cosas Por Hacer</md-subheader>
-      <md-list-item ng-repeat="todo in todos"  class="noright">
-        <md-icon class="md-primary"  >hourglass_empty</md-icon>
-        <p>{{ todo.title }}</p>
-        <md-button class="md-fab md-primary md-mini" md-colors="{background: 'green'}" aria-label="Use Android">
-          <md-icon   ng-click="save()">edit</md-icon>
-        </md-button>
-      </md-list-item>
-    <md-divider ></md-divider>
-    <!--<li ng-repeat="todo in todos | filter: search">
-      <input type="checkbox" ng-model="todo.completed" ng-change="update($index)">
-
-      <button ng-show="!editing[$index]" ng-click="edit($index)">edit</button>
-
-      <input ng-show="editing[$index]" type="text" ng-model="todo.title">
-      <button ng-show="editing[$index]" ng-click="update($index)">Update</button>
-      <button ng-show="editing[$index]" ng-click="cancel($index)">Cancel</button>
-      <button ng-show="!editing[$index]" ng-click="remove($index)">remove</button>
-    </li>
-  -->
-  </md-list>
-      <md-input-container>
-        <label>New task</label>
-        <input  ng-model="newTodo">
-      </md-input-container>
-      <md-button class="md-fab md-primary md-mini" aria-label="Use Android">
-        <md-icon   ng-click="save()">save</md-icon>
-      </md-button>
-
-</md-content>
-</script>
-
-<script type="text/ng-template" id="/todoDetails.html">
-  <h1>{{ todo.name }}</h1>
-  completed: <input type="checkbox" ng-model="todo.completed"><br>
-  note: <textarea ng-model="todo.note"></textarea><br><br>
-
-  <button ng-click="update()">Update</button>
-  <button ng-click="remove()">Remove</button>
-  <a href="/">Cancel</a>
-</script>
 
 
 <script>
   angular.module('app', ['ngMaterial','leaflet-directive','ngRoute', 'ngResource']);
 </script>
-
 <!-- Servicios -->
-<script src="/helpers/servicios/todo.js"></script>
+<script src="/helpers/servicios/proveedor.js"></script>
 <!-- Controladores -->
-<script src="/helpers/controladores/todo.js"></script>
-<leaflet width="100%" height="480px"></leaflet>
+<script src="/helpers/controladores/proveedor.js"></script>
 
 </body>
 </html>

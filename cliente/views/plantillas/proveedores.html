@@ -1,0 +1,27 @@
+<md-content>
+  <md-input-container>
+      <label>Search</label>
+      <input >
+    </md-input-container>
+<md-list flex>
+  <md-subheader class="md-no-sticky">Cosas Por Hacer</md-subheader>
+    <md-list-item ng-repeat="proveedor in proveedores"  class="noright">
+      <md-icon class="md-primary"  >hourglass_empty</md-icon>
+      <h3>{{ proveedor.nombre }}</h3>
+      <p>{{ proveedor.documento }}</p>
+      <md-button class="md-fab md-primary md-mini" md-colors="{background: 'green'}" aria-label="Use Android">
+        <md-icon   ng-click="save()">edit</md-icon>
+      </md-button>
+    </md-list-item>
+  <md-divider ></md-divider>
+</md-list>
+    <md-input-container>
+      <label>New task</label>
+      <input  ng-model="newTodo">
+    </md-input-container>
+    <md-button class="md-fab md-primary md-mini" aria-label="Use Android">
+      <md-icon   ng-click="save()">save</md-icon>
+    </md-button>
+</md-content>
+
+<leaflet width="100%" height="480px"></leaflet>
