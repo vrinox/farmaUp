@@ -5,8 +5,8 @@ module.exports = function(app){
     res.render('index', {});
   });
 
-  //rutas todo
-  require('./todo')(app);
+  //rutas proveedor
+  require('./proveedor')(app);
 
   //rutas users
   require('./users')(app);
