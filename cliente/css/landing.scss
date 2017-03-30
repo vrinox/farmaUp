@@ -1,33 +1,81 @@
-body{
-  min-height: 100%;
-  md-content[landing]{
-    width: 100%;
-    height: 100%;
-    background-color: #e8e8e8;
-    margin-bottom: 10px;
-    div[analitycs]{
-      margin: 10px;
-      width: calc(70% - 20px);
-      background-color: white;
-      box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
-    }
-    div[descripcion]{
-      margin: 10px;
-      width: calc(30% - 20px);
-      box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
-    }
-    div[contenedor-servicio]{
+@import 'font-roboto.css';
+html{
+  background-color: #e8e8e8;
+  div.clear{
+    clear: both;
+  }
+  body{
+    min-height: 100%;
+    md-content[landing]{
       width: 100%;
-      height: calc(60% - 52px);
-      p{
-        width: 70%;
-        margin: 0px auto;
+      height: 100%;
+      margin-bottom: 10px;
+      background-color: white;
+      div[analitycs]{
+        margin: 10px;
+        width: calc(70% - 20px);
+        background-color: white;
+        box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
       }
-    }
-    div[servicio]{
-      width: calc(100% / 4);
-      float: left;
-      height: 40%;
+      div[descripcion]{
+        margin: 10px;
+        width: calc(30% - 20px);
+        box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+      }
+
+      div.servicio{
+        border-bottom: 1px solid #e5e5e5;
+        margin: 0px 10%;
+        padding: 15px 0px;
+        div.cont-img{
+          border-radius: 200px;
+          overflow: hidden;
+          width: 300px;
+          height: 300px;
+          margin: 0px auto;
+          img{
+            width: 400px;
+            height: 300px;
+            margin-left: -50px;
+          }
+        }
+       div.descripcion-servicio{
+         width: calc(100% - 400px);
+         height: 200px;
+         h3{
+           color:#3F51B5;
+           font-family: 'Roboto-b';
+           font-size: 20px;
+         }
+         p{
+           text-align: justify;
+           color:#9E9E9E;
+           font-size: 14px;
+         }
+       }
+
+      }
+      div.servicio.left{
+        div.cont-img{
+          float: left;
+          margin-left: 50px;
+        }
+        div.descripcion-servicio{
+          float: right;
+        }
+      }
+      div.servicio.right{
+        div.cont-img{
+          float: right;
+          margin-right:  50px;
+        }
+        div.descripcion-servicio{
+          float: left;
+          p{
+              margin-right: 30px;
+          }
+        }
+      }
     }
   }
 }
