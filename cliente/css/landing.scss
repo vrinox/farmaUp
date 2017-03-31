@@ -9,7 +9,7 @@ html{
     md-content[landing]{
       width: 100%;
       height: 100%;
-      margin-bottom: 10px;
+      border-bottom: 2px solid silver;
       background-color: white;
       &:nth-child(2){
         height: auto;
