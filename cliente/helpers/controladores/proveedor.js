@@ -1,4 +1,4 @@
-angular.module('app')
+angular.module('balaFriaVentas')
 .controller('ProveedorController', ['$scope', 'Proveedores', function ($scope, Proveedores) {
   $scope.editing = [];
   //aqui busca en la api
@@ -45,10 +45,6 @@ angular.module('app')
 }])
 .config(['$routeProvider', function ($routeProvider) {
   $routeProvider
-    .when('/', {
-      templateUrl: '/views/plantillas/proveedores.html',
-      controller: 'ProveedorController'
-    })
     .when('/proveedor/:id', {
       templateUrl: '/proveedorDetails.html',
       controller: 'ProveedorDetailCtrl'

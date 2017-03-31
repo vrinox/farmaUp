@@ -1,13 +1,13 @@
 var models = require('../models/index');
 module.exports = function(app){
   //obtener proveedores
-  app.get('/proveedores', function(req, res) {
+  app.get('/api/proveedores', function(req, res) {
     models.proveedor.findAll({}).then(function(proveedores) {
       res.json(proveedores);
     });
   });
   //guardar registro
-  app.post('/proveedores', function(req, res) {
+  app.post('/api/proveedores', function(req, res) {
     models.proveedor.create({
       id_proveedor: req.body.id_proveedor,
       nombre: req.body.nombre,
@@ -17,7 +17,7 @@ module.exports = function(app){
     });
   });
   //buscar uno solo
-  app.get('/proveedor/:id', function(req, res) {
+  app.get('/api/proveedor/:id', function(req, res) {
     models.proveedor.find({
       where: {
         id_proveedor: req.params.id
@@ -27,7 +27,7 @@ module.exports = function(app){
     });
   });
   //modificar
-  app.put('/proveedor/:id', function(req, res) {
+  app.put('/api/proveedor/:id', function(req, res) {
     models.proveedor.find({
       where: {
         id_proveedor: req.params.id
@@ -45,7 +45,7 @@ module.exports = function(app){
     });
   });
   // delete a single proveedor
-  app.delete('/proveedor/:id', function(req, res) {
+  app.delete('/api/proveedor/:id', function(req, res) {
     models.proveedor.destroy({
       where: {
         id_proveedor: req.params.id
