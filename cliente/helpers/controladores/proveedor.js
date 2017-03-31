@@ -45,11 +45,11 @@ angular.module('app')
 }])
 .config(['$routeProvider', function ($routeProvider) {
   $routeProvider
-    .when('/', {
+    .when('/proveedores', {
       templateUrl: '/views/plantillas/proveedores.html',
       controller: 'ProveedorController'
     })
-    .when('/:id', {
+    .when('/proveedor/:id', {
       templateUrl: '/proveedorDetails.html',
       controller: 'ProveedorDetailCtrl'
    });
