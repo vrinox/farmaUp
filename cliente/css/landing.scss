@@ -11,6 +11,9 @@ html{
       height: 100%;
       margin-bottom: 10px;
       background-color: white;
+      &:nth-child(2){
+        height: auto;
+      }
       div[analitycs]{
         margin: 10px;
         width: calc(70% - 20px);

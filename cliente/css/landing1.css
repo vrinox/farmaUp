@@ -10,6 +10,8 @@ html {
       height: 100%;
       margin-bottom: 10px;
       background-color: white; }
+      html body md-content[landing]:nth-child(2) {
+        height: auto; }
       html body md-content[landing] div[analitycs] {
         margin: 10px;
         width: calc(70% - 20px);
